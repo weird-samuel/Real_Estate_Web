@@ -1,0 +1,612 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #161617;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --vargreen: #1FAB71;
+}
+
+
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 80px;
+    overflow: hidden;
+    background-color: #161617;
+}
+
+
+nav .logo {
+    float: left;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links a {
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 7px;
+    overflow: hidden;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+nav .links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: calc(100% - 3px);
+    transition: 0.5s;
+    border-bottom: 2px solid var(--vargreen);
+    border-radius: 2px;
+
+}
+
+nav .links a:hover::before {
+    left: 0;
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-burger {
+    padding: 1%;
+    background-color: #fff;
+    border-radius: 20%;
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.hero {
+    height: calc(100vh - 80px);
+    padding: 2px;
+    width: 80vw;
+    position: absolute;
+    top: 10%;
+    margin: 5%;
+    margin-top: 7%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.column_text {
+    color: white;
+    width: 100%;
+    margin: auto;
+}
+
+.column_text p {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.column_text h1 {
+    font-size: 3.5rem;
+}
+
+.column_bar {
+    display: flex;
+    background-color: #fff;
+    border-radius: 25px;
+    height: 90px;
+    width: 80%;
+    padding-left: 15px;
+    margin-top: 10%;
+    align-items: center;
+}
+
+.column_bar button {
+    background-color: var(--vargreen);
+    color: white;
+    padding: 2%;
+    width: 80px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+}
+
+.icon {
+    color: var(--vargreen);
+    width: 15px;
+    height: 15px;
+    margin-left: 2%;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.clb-c {
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+
+.clb-c p {
+    margin-left: 5%;
+    color: black;
+}
+
+.ico {
+    margin-left: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.hero img {
+    height: 550px;
+}
+
+.achievement {
+    display: flex;
+}
+
+.a-flex {
+    margin-right: 4%;
+    margin-top: 2%;
+    font-weight: bolder;
+}
+
+.a-flex h3 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: -7%;
+}
+
+.a-flex span {
+    margin-left: -6%;
+    color: #4573FD;
+}
+
+.a-flex p {
+    color: #808080;
+}
+
+.second {
+    height: 80vh;
+    position: absolute;
+    top: 120vh;
+    width: 100vw;
+}
+
+.second p {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: var(--vargreen);
+    margin-bottom: -2%;
+}
+
+.second h2 {
+    margin-left: 5%;
+    font-size: 35px;
+    color: white;
+}
+
+.se-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.se-bar p {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.box {
+    width: 32%;
+    height: max-content;
+    padding-bottom: 2%;
+    border: 1px solid #131313;
+    box-shadow: 2px 2px 4px;
+    margin-right: 1%;
+    margin-bottom: 5%;
+    background: #131314;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.box:hover {
+    box-shadow: 5px 5px 20px;
+    transition: 1s;
+}
+
+img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box h3 {
+    color: #D0D0D1;
+    margin-left: 5%;
+}
+
+.card-des {
+    display: flex;
+    margin-top: -5%;
+}
+
+.card-des p {
+    color: white;
+}
+
+.booking {
+    display: inline-flex;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.booking button {
+    width: 120px;
+    padding: 3%;
+    margin-right: 80px;
+    background-color: transparent;
+    border: 2px solid var(--vargreen);
+    border-radius: 7px;
+    color: var(--vargreen);
+}
+
+.booking p {
+    font-size: x-large;
+}
+
+.booking button:hover {
+    background-color: var(--vargreen);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.services {
+    width: 80vw;
+    height: 85vh;
+    position: absolute;
+    top: 220vh;
+    margin: 5%;
+}
+
+.img{
+    width: 90%;
+}
+
+.service_text{
+    position: absolute;
+    top: 10%;
+    margin: 5%;
+}
+
+.service_text p{
+    color: var(--vargreen);
+    font-size: 18px;
+}
+
+.service_text h1{
+    color: #fff;
+    font-size: 48px;
+}
+
+.service_text span{
+    color: white;
+}
+
+.sparkles{
+    width: 300px;
+    height: auto;
+    display: flex;
+    margin-top: 5%;
+}
+
+.spi{
+    color: #4573FD;
+}
+
+.sparkles span{
+    margin: 5px;
+    color: white;
+    width: 200px;
+}
+
+.benefits{
+    width: 100vw;
+    height: 85vh;
+    background-color: #1F2022;
+    position: absolute;
+    top: 320vh;
+}
+
+.benefits_text{
+    width: 50%;
+    padding: 2%;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.benefits_text p{
+    color: var(--vargreen);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.benefits_text h1{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.benefits_text span{
+    font-size: 16px;
+    color: #969696;
+}
+
+.benefits_text h6{
+    color: #fff;
+    font-size: large;
+}
+
+.beni{
+    color: #4573FD;
+}
+
+.benimg{
+    width: 65%;
+    margin-top: 10%;
+}
+
+.employees{
+    position: absolute;
+    width: 25vw;
+    height: 10vh;
+    margin-left: 1.7%;
+    top: 57vh;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: rgba(48, 45, 45, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); 
+    padding: 2%;
+}
+
+.empimg{
+    width: 40px;
+    display: inline-flex;
+    position: absolute;
+    margin: 10%;
+    margin-left: 50%;
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .column_text p {
+        font-size: 14px;
+    }
+
+    nav .logo {
+        float: none;
+        width: auto;
+    }
+
+    nav .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 70px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in-out;
+    }
+
+    nav .links a {
+        font-size: 20px;
+    }
+
+    nav :checked~.links {
+        bottom: 0;
+    }
+
+    nav .icon-burger {
+        display: block;
+    }
+
+    nav :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    nav :checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    nav :checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hero {
+        top: 10%;
+        position: relative;
+        margin: auto;
+        margin-top: 20%;
+    }
+
+    .hero img {
+        height: 50%;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .column_text {
+        width: 90%;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .column_text h1{
+        font-size: 2rem;
+    }
+
+    .service_text h1{
+        font-size: 2rem;
+    }
+
+    .column_bar {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .clb-c {
+        width: 50%;
+    }
+
+    .container {
+        width: 85%;
+        display: block;
+    }
+
+    .box {
+        width: 100%;
+        margin-bottom: 4%;
+        padding-bottom: 10%;
+    }
+
+    .services{
+        top: 315vh;
+    }
+    
+    .img{
+        width: 100%;
+        height: 50%;
+        margin-left: 5%;
+    }
+    
+    .service_text{
+        top: 60%;
+        margin-left: 10%;
+    }
+
+    .benefits{
+        top: 415vh;
+        padding-bottom: 50%;
+    }
+
+    .benefits_text{
+        width: 80%;
+        margin-left: 10%;
+        height: max-content;
+    }
+
+    .benefits_text h1{
+        font-size: 2rem;
+    }
+
+    .benimg{
+        margin-left: 15%;
+    }
+}
